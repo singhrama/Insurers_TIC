@@ -11,3 +11,5 @@ fortune 500 company we have a company name as REINSURANCE GROUP OF AMERICA and i
 https://docs.google.com/spreadsheets/d/1fDahKvi3RpmXsQqdtpyjxDLeMsy4Lydn/edit#gid=575311671
 
 https://d25kgz5rikkq4n.cloudfront.net/cost_transparency/mrf/in-network-rates/reporting_month=2022-07/2022-07-01_cigna-health-life-insurance-company_salt-lake-city-ut-connect_in-network-rates.json.gz?Expires=1659190086&Signature=Kw-ps53TGFYtl2oKfKY4INMna8IO6KtX9revDlhwgrADE9hXufkQVVscpm9li9JsR7LeXP2uajkmUcDsUuFBChxHORV1FQ7t6H0diyJNAqJjBVgd3k9wfUQ~Oa-nk8I995WQhgmJSjfSK2L0u1zBRLvP0x4Z8418vfWNHRuviAYMDbuXVNiOlGnRw6riPT6yuMXJdf3x6prrUqA1zQ5sKqdA4uX1st--Bk5i6pszB2ykNAXJWYH-EJDmpbSUIVz3-GUmc-h~Q3c4BLOBpH5ZD0uRdHNh6ArRyUe2yhttpMTu9PkPdKuwQ2dCfZbKKIXk6FKVU04BQjY-5FxYop3KZA__&Key-Pair-Id=K1NVBEPVH9LWJP
+
+https://health1.aetna.com/app/public/#/one/insurerCode=AETNACVS_I&brandCode=ALICSI/machine-readable-transparency-in-coverage
