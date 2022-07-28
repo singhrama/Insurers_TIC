@@ -15,3 +15,5 @@ https://d25kgz5rikkq4n.cloudfront.net/cost_transparency/mrf/in-network-rates/rep
 https://health1.aetna.com/app/public/#/one/insurerCode=AETNACVS_I&brandCode=ALICSI/machine-readable-transparency-in-coverage
 
 https://drive.google.com/drive/folders/11mOeHhuuEf_ncNdzEQCG2RSW-Hb4A_yf
+
+https://d25kgz5rikkq4n.cloudfront.net/cost_transparency/mrf/allowed_amounts/reporting_month=2022-07/client_id=00057120/2022-07-01_cigna-health-life-insurance-company_national-oap_allowed-amounts.json.gz?Expires=1659193076&Signature=mBsxWu-DBR6iMBM-44WQJhfzsocg04EROLcxd8SsE2sLMX-26LhGN5FS7jsBP7Z~IJA9Ku17yPENJhPFilOeuXICyoMy763EdTnJrlXfqc2P3wJ406A5lAUeo53jWLFBgL7E7-Dj4WtEWeFLSZGcSETQ6ZwOINbDc9YWxu9wM1iC~WYvxGokd2hZCFsGtJNTgy9cKatrijwzB1R3jATyryAg2a6fILBDXKSqALPqa5B7ATEOdRPCu1IlbgaCjlAAuWy900GuWOu8p6o1SAidnAU4FOS7MlX8VjKXZQAJdzg-diYRDX0aYl3nApcopu2d7x-GvmcIeoZQHcQR1~SfBQ__&Key-Pair-Id=K1NVBEPVH9LWJP
