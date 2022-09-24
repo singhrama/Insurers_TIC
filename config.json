@@ -1,0 +1,7 @@
+{
+	"total_chunks":2,
+	"num_entities_per_chunk":5,
+	"billing_code":"",
+	"input_file_path":"/N/u/pvadla/Carbonate/Downloads/Parse Data/IN_EINSMEDIN38_0_3.json.gz",
+	"output_folder_path":"/N/u/pvadla/Carbonate/Downloads/Parse Data/Chunks"
+}
