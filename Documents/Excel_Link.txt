@@ -22,3 +22,5 @@ https://d25kgz5rikkq4n.cloudfront.net/cost_transparency/mrf/allowed_amounts/repo
 
 
 https://drive.google.com/file/d/1UzdW_Xhv5fYp2itPLAGnphic3vo68RLy/view?usp=sharing
+
+https://developers.humana.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-10-26_1_in-network-rates_0000000'
