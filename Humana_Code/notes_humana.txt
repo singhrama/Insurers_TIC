@@ -1,0 +1,27 @@
+45378 
+5 rows have 0 
+too much variation in the cost from 32.97 to 11033.79
+TIN 610666209, 474203615 - 118184.88
+
+
+27130
+too many zeros 2148
+446589.92 -  TIN 610666209, 455543070, 205497203, 272803764
+too much variation in the cost from 45 to 75282.6 and 14354.75, 11600.8
+
+
+80061
+too many zeros 1
+4875.97-  TIN 474203615, 452710251, 311545520 NPI 1063913986, 1699296293, 1104815141
+too much variation in the cost from 1.16 to 4875.97
+
+
+99285
+too many zeros 2
+62997.95-  TIN 351910756, 452710251, 208963925, 311545520 NPI 1043622533, 1699296293, 1427049006, 1104815141
+too much variation in the cost from 12.33 to 5720.23
+
+73721
+too many zeros 48
+71497.21-  TIN 474203615, 311545520 NPI 1063913986, 1104815141
+too much variation in the cost from 20.68 to 3121.86
