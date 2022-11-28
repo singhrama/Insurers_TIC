@@ -38,19 +38,6 @@ def setup_logging(inti_file, chunkid):
 	logger.addHandler(file_handler)
     
 	return logger
-	
-
-def qdf(con, sql):
-    """Query pandas dataframes using duckdb
-
-    Args:
-        con: duckdb connection
-        sql: sql string
-
-    Returns:
-        pandas.DataFrame
-    """
-    return con.execute(sql).df()
 
 def check_filename_exist(inti_path,filename,ologger):
 	otrack = inti_path + '/' + "File_names_tracker.json"
@@ -129,10 +116,10 @@ def read_content(p, cols, codes):
                 
                 
 #Input Parameters as File Paths
-os.chdir('/N/project/TIC/Humana/data_10_2022')
-save_path = '/N/project/TIC/Humana/99213_ffs_negotiated'
-json_files = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify/File_Name_Run_JSON/'   
-inti_path = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify'
+os.chdir('/N/project/TIC/Humana/data_10_2022/CSV_GZ/Network_3')
+save_path = '/N/project/TIC/Humana/data_10_2022/Billing_Code_Files/Network_3/'
+json_files = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify_BC/File_Name_Run_JSON/'   
+inti_path = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify_BC'
 
 # Adjust to get desired columns from csv file
 cols = ["NPI", "NEGOTIATION_ARRANGEMENT","BILLING_CLASS", "BILLING_CODE", "NEGOTIATED_RATE","NEGOTIATED_TYPE", "TIN", "TYPE", "BILLING_CODE_TYPE"]
@@ -150,12 +137,45 @@ with open(json_files + "File_Names_" + str(chunk_id) + '.json', 'r') as jf:
 new_files=list(new_files)
 
 #Define Billing Code to Extract
-bl_code = ['99213']
+bl_code = ['80061'] #45378, 99213, 73721, 27130, 80061, 99285
+
+df_humana=None
 
 for file in tqdm((new_files)):
-    
-    infile = pathlib.Path(file)
-    #Method call to split NPIs, filter NEGOTIATION_ARRANGEMENT as 'ffs' & NEGOTIATED_TYPE as 'negotiated'
-    df_humana = read_content(infile, cols, bl_code)
-    #Save the processed DataFrame as CSV
-    df_humana.to_csv(save_path + '/' + file.rsplit('/',1)[1], index=False, sep=",")
+	temp=None
+	
+	infile = pathlib.Path(file)
+	#Method call to split NPIs, filter NEGOTIATION_ARRANGEMENT as 'ffs' & NEGOTIATED_TYPE as 'negotiated'
+	temp = read_content(infile, cols, bl_code)
+	#Save the processed DataFrame as CSV
+	if temp is not None:
+		temp["CSV_GZ_File"]=file.split("/")[8]
+		if df_humana is None:
+			df_humana = temp
+		else:
+			df_humana = pandas.concat([temp,df_humana],axis = 0)
+
+df_humana.to_csv(save_path + '/' + str(bl_code[0]) + "_"+ str(chunk_id) +'.csv', index=False, sep=",")
+        
+#df_humana.to_csv(save_path + '/' + file.rsplit('/',1)[1], index=False, sep=",")
+		
+		
+		
+		
+		
+#		for files in tqdm(csv_files):
+#    temp = pandas.read_csv(files)
+#    if len(temp.index)>0:
+#        temp["CSV_GZ_File"]=files.split("/")[6] #files.split("/")[6]
+#    if df1 is None:
+#        df1 = temp
+#    else:
+#        df1 = pandas.concat([temp,df1],axis = 0)
+        
+#df1.to_csv("/N/project/TIC/Humana/sub_set_csv_BL/" + file_name + '.csv', index=False)
+		
+		
+		
+		
+		
+

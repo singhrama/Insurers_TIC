@@ -2,15 +2,17 @@
 # -*- coding: utf-8 -*-
 
 import subprocess
+import glob
 import pandas as pd
 import option_util as util
 import re
+import os
 import json
 
 ### read in arguments
 args = util.get_args()
 
-default_args = {'chunks': 2, #Main Chunks reads
+default_args = {'chunks': 65, #Main Chunks reads
                 'starts': None,
                 'stops': None,
                 'partition': 'general',
@@ -117,8 +119,11 @@ def cancel_job(idnumb):
 def submit_job(ii):
 	subprocess.run(['sbatch', projdir + str(ii) + bashfilename + '.sh'])
 
-ofilenames = pd.read_csv("/N/project/cryptocurrency_data/TIC_DATA/Chunkify/All_Downloaded_Files.csv") #/N/slate/singrama/Chunk_Run/Input_Files/vsurfpd_cusip_data.csv") #/N/u/singrama/Carbonate/Documents/Beta_Conditional/Final_inputs
-ofilenames_ls = list(ofilenames.File_Name) #zip(cusip_sec.cusip,cusip_sec.secid))
+#ofilenames = pd.read_csv("/N/project/cryptocurrency_data/TIC_DATA/Chunkify/All_Downloaded_Files.csv") #/N/slate/singrama/Chunk_Run/Input_Files/vsurfpd_cusip_data.csv") #/N/u/singrama/Carbonate/Documents/Beta_Conditional/Final_inputs
+#ofilenames_ls = list(ofilenames.File_Name) #zip(cusip_sec.cusip,cusip_sec.secid))
+
+f_path = "/N/project/TIC/Humana/data_10_2022/CSV_GZ/Network_3"
+ofilenames_ls = glob.glob(os.path.join(f_path, "*.csv.gz"))
 
 runlist = chunk_split(ofilenames_ls, chunks)
 
