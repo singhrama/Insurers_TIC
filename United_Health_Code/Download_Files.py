@@ -43,10 +43,10 @@ def setup_logging(inti_file, chunkid):
 	
 def read_content(p, cols, codes):
     """
-    Parse Humana in-network file for specific billing codes.
+    Parse Anthem in-network file for specific billing codes.
 
     Args:
-        p: pathlib.Path object for humana file
+        p: pathlib.Path object for Anthem file
         cols: list of columns to extract from the file
         codes: list of billing codes to search for
 
@@ -132,10 +132,10 @@ def add_cusip_exist(inti_path,filename,ologger):
 			jf.close()
 
 #Input Parameters			
-save_path = '/N/project/TIC/Humana/data_10_2022'
+save_path = '/N/project/TIC/Anthem/data_10_2022'
 json_files = '/N/project/cryptocurrency_data/TIC_DATA/Batch_Process_data_download/File_Name_Run_JSON/'   
 inti_path = '/N/project/cryptocurrency_data/TIC_DATA/Batch_Process_data_download'
-URL = 'https://developers.humana.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-10-26_1_in-network-rates_0000000'
+URL = 'https://developers.anthem.com/Resource/DownloadPCTFile?fileType=innetwork&fileName=2022-10-26_1_in-network-rates_0000000'
 
 #Read Arguments from Batch Process
 args = util.get_args()

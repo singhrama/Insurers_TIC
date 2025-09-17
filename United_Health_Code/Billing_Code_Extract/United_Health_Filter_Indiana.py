@@ -84,10 +84,10 @@ def add_cusip_exist(inti_path,filename,ologger):
 
 def read_content(p, cols, codes):
     """
-    Parse Humana in-network file for specific billing codes.
+    Parse Anthem in-network file for specific billing codes.
 
     Args:
-        p: pathlib.Path object for humana file
+        p: pathlib.Path object for Anthem file
         cols: list of columns to extract from the file
         codes: list of billing codes to search for
 
@@ -116,8 +116,8 @@ def read_content(p, cols, codes):
                 
                 
 #Input Parameters as File Paths
-os.chdir('/N/project/TIC/Humana/data_10_2022/CSV_GZ/Network_3')
-save_path = '/N/project/TIC/Humana/data_10_2022/Billing_Code_Files/Network_3/'
+os.chdir('/N/project/TIC/Anthem/data_10_2022/CSV_GZ/Network_3')
+save_path = '/N/project/TIC/Anthem/data_10_2022/Billing_Code_Files/Network_3/'
 json_files = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify_BC/File_Name_Run_JSON/'   
 inti_path = '/N/project/cryptocurrency_data/TIC_DATA/Chunkify_BC'
 
@@ -139,7 +139,7 @@ new_files=list(new_files)
 #Define Billing Code to Extract
 bl_code = ['80061'] #45378, 99213, 73721, 27130, 80061, 99285
 
-df_humana=None
+df_Anthem=None
 
 for file in tqdm((new_files)):
 	temp=None
@@ -150,14 +150,14 @@ for file in tqdm((new_files)):
 	#Save the processed DataFrame as CSV
 	if temp is not None:
 		temp["CSV_GZ_File"]=file.split("/")[8]
-		if df_humana is None:
-			df_humana = temp
+		if df_Anthem is None:
+			df_Anthem = temp
 		else:
-			df_humana = pandas.concat([temp,df_humana],axis = 0)
+			df_Anthem = pandas.concat([temp,df_Anthem],axis = 0)
 
-df_humana.to_csv(save_path + '/' + str(bl_code[0]) + "_"+ str(chunk_id) +'.csv', index=False, sep=",")
+df_Anthem.to_csv(save_path + '/' + str(bl_code[0]) + "_"+ str(chunk_id) +'.csv', index=False, sep=",")
         
-#df_humana.to_csv(save_path + '/' + file.rsplit('/',1)[1], index=False, sep=",")
+#df_Anthem.to_csv(save_path + '/' + file.rsplit('/',1)[1], index=False, sep=",")
 		
 		
 		
@@ -172,7 +172,7 @@ df_humana.to_csv(save_path + '/' + str(bl_code[0]) + "_"+ str(chunk_id) +'.csv',
 #    else:
 #        df1 = pandas.concat([temp,df1],axis = 0)
         
-#df1.to_csv("/N/project/TIC/Humana/sub_set_csv_BL/" + file_name + '.csv', index=False)
+#df1.to_csv("/N/project/TIC/Anthem/sub_set_csv_BL/" + file_name + '.csv', index=False)
 		
 		
 		

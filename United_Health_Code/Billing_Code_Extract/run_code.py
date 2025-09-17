@@ -122,7 +122,7 @@ def submit_job(ii):
 #ofilenames = pd.read_csv("/N/project/cryptocurrency_data/TIC_DATA/Chunkify/All_Downloaded_Files.csv") #/N/slate/singrama/Chunk_Run/Input_Files/vsurfpd_cusip_data.csv") #/N/u/singrama/Carbonate/Documents/Beta_Conditional/Final_inputs
 #ofilenames_ls = list(ofilenames.File_Name) #zip(cusip_sec.cusip,cusip_sec.secid))
 
-f_path = "/N/project/TIC/Humana/data_10_2022/CSV_GZ/Network_3"
+f_path = "/N/project/TIC/Anthem/data_10_2022/CSV_GZ/Network_3"
 ofilenames_ls = glob.glob(os.path.join(f_path, "*.csv.gz"))
 
 runlist = chunk_split(ofilenames_ls, chunks)
